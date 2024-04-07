@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import defaultLayout from './layouts/default.vue';
 </script>
 
 <template>
-  <RouterView />
+  <defaultLayout class=" select-none">
+    <RouterView />
+  </defaultLayout>
 </template>
