@@ -5,15 +5,6 @@ import defaultLayout from './layouts/default.vue';
 
 <template>
   <defaultLayout class=" select-none">
-    <router-view v-slot="{ Component }">
-      <transition name="fade1">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-
-    <transition name="fade" mode="out-in">
-      <router-view>
-      </router-view>
-    </transition>
+    <RouterView />
   </defaultLayout>
 </template>
