@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/home/index.vue'
-
-import views from  "@/views/autoExport"
-
-console.log(views());
+import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,20 +10,28 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/dev/sql-prettify',
+      name: 'sql-prettify',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/dev/SqlPrettifyView.vue')
+    },
+    {
       path: '/crypto/aes',
       name: 'crypto-aes',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/crypto/Aes.vue')
-    },
-    {
-      path: '/qrcode',
-      name: 'qrcode',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/qrcode/index.vue')
     }
   ]
 })
