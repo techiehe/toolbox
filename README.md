@@ -23,4 +23,4 @@ pnpm build
 
 ## License
 
-[Apache 2.0](./LICENSE) License © 2024-PRESENT [huala-fun](https://github.com/huala-fun)
+[Apache 2.0](./LICENSE) License © 2024-PRESENT [techiehe](https://github.com/techiehe)
