@@ -1,6 +1,6 @@
 <template>
     <el-config-provider :locale="locale">
-        <el-container class="select-none">
+        <el-container >
             <el-header class="p-0">
                 <div class="nav flex items-center justify-between px-4  h-12">
                     <div class="flex items-center gap-2  cursor-pointer" @click="$router.push('/')">

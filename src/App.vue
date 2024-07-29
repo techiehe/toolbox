@@ -10,7 +10,6 @@ import defaultLayout from './layouts/default.vue';
         <component :is="Component" />
       </transition>
     </router-view>
-
     <transition name="fade" mode="out-in">
       <router-view>
       </router-view>

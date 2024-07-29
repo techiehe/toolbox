@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useCopy } from '@/hooks/use-copy';
+import { useCopy } from '@/composables/use-copy';
 import { computed, watch } from 'vue';
 import { CopyDocument } from '@element-plus/icons-vue';
 const props = defineProps(["prop"])

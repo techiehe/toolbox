@@ -24,7 +24,7 @@ import {
   isUnixTimestamp,
 } from './date-time-converter.models';
 import { withDefaultOnError } from '@/utils/defaults';
-import { useValidation } from '@/hooks/use-validation';
+import { useValidation } from '@/composables/use-validation';
 import { ref, computed, watch } from 'vue'
 import { useNow } from '@vueuse/core';
 import InputCopyable from '@/components/InputCopyable.vue';
@@ -102,9 +102,7 @@ const normalizedDate = computed(() => {
   if (!inputDate.value) {
     return now.value;
   }
-
   const { toDate } = formats[formatIndex.value];
-
   try {
     return toDate(inputDate.value);
   }
